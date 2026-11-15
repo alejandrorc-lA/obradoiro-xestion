@@ -13,7 +13,7 @@
 
 Notas:
 
-- La identidad de git (nombre «Aexiño») está configurada solo en este repositorio. El primer commit conserva el nombre provisional anterior.
+- La identidad de git (nombre «Alexiño») está configurada solo en este repositorio.
 - Todavía no hay repositorio en GitHub; se creará en la tarea 4 (publicación).
 
 ## Siguiente tarea
