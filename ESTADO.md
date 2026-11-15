@@ -24,6 +24,12 @@ Fuera de alcance del motor por ahora: incapacidad temporal, meses incompletos, c
 
 Nota: la carpeta `ejemplos nóminas` está excluida de git porque son soluciones docentes y el repositorio se publicará.
 
+## Tarea 3 — Simulador de nómina (primera versión)
+
+- `src/simuladores/nomina/nomina.ts`: formulario del supuesto, modo alumnado (escribe nueve resultados y comprueba cuáles acierta, sin ver la solución) y modo docente (recibo resuelto completo y generador de supuestos aleatorios). Portada con enlace al simulador.
+- Pruebas y build correctos. **La pantalla no se ha revisado en el navegador**: falta que el docente la pruebe con `npm run dev`.
+- No incluye todavía el contrato de formación en alternancia (el motor sí lo calcula).
+
 ## Siguiente tarea
 
-Tarea 3 — Simulador de nómina (pantalla con modo alumnado y modo docente) sobre este motor.
+Revisar el simulador en el navegador y corregir lo que se vea. Después, tarea 4 — publicación en GitHub Pages.

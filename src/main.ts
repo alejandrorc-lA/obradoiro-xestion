@@ -1,22 +1,27 @@
-// Portada: lista de simuladores. Cada simulador novo engádese a esta lista.
+import { montarSimuladorNomina } from "./simuladores/nomina/nomina";
+
+// Portada e navegacion. Cada simulador novo engadese a esta lista; os que
+// tenen "montar" abrense en #ruta.
 interface FichaSimulador {
+  ruta: string;
   titulo: string;
   descricion: string;
-  dispoñible: boolean;
+  montar?: (raiz: HTMLElement) => void;
 }
 
 const simuladores: FichaSimulador[] = [
-  { titulo: "Nómina", descricion: "Calcula un recibo de salarios paso a paso.", dispoñible: false },
-  { titulo: "IRPF", descricion: "Tipo de retención e cota.", dispoñible: false },
-  { titulo: "Cotizacións", descricion: "Bases e cotas á Seguridade Social.", dispoñible: false },
-  { titulo: "Asentos contables", descricion: "Constrúe asentos no libro diario.", dispoñible: false },
-  { titulo: "Amortización", descricion: "Cadros de amortización.", dispoñible: false },
-  { titulo: "Punto morto", descricion: "Limiar de rendibilidade.", dispoñible: false },
+  { ruta: "nomina", titulo: "Nómina", descricion: "Calcula un recibo de salarios paso a paso.", montar: montarSimuladorNomina },
+  { ruta: "irpf", titulo: "IRPF", descricion: "Tipo de retención e cota." },
+  { ruta: "cotizacions", titulo: "Cotizacións", descricion: "Bases e cotas á Seguridade Social." },
+  { ruta: "asentos", titulo: "Asentos contables", descricion: "Constrúe asentos no libro diario." },
+  { ruta: "amortizacion", titulo: "Amortización", descricion: "Cadros de amortización." },
+  { ruta: "punto-morto", titulo: "Punto morto", descricion: "Limiar de rendibilidade." },
 ];
 
-const app = document.querySelector<HTMLElement>("#app");
+const app = document.querySelector<HTMLElement>("#app")!;
 
-if (app) {
+function pintarPortada(): void {
+  app.textContent = "";
   const lista = document.createElement("ul");
   lista.className = "simuladores";
   for (const s of simuladores) {
@@ -25,10 +30,28 @@ if (app) {
     titulo.textContent = s.titulo;
     const descricion = document.createElement("p");
     descricion.textContent = s.descricion;
-    const estado = document.createElement("span");
-    estado.textContent = s.dispoñible ? "Dispoñible" : "En preparación";
-    item.append(titulo, descricion, estado);
+    item.append(titulo, descricion);
+    if (s.montar) {
+      const ligazon = document.createElement("a");
+      ligazon.href = `#${s.ruta}`;
+      ligazon.textContent = "Abrir simulador";
+      item.append(ligazon);
+    } else {
+      const estado = document.createElement("span");
+      estado.textContent = "En preparación";
+      item.append(estado);
+    }
     lista.append(item);
   }
   app.append(lista);
 }
+
+function navegar(): void {
+  const ruta = location.hash.slice(1);
+  const simulador = simuladores.find((s) => s.ruta === ruta && s.montar);
+  if (simulador?.montar) simulador.montar(app);
+  else pintarPortada();
+}
+
+window.addEventListener("hashchange", navegar);
+navegar();

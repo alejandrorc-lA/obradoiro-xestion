@@ -64,5 +64,95 @@ header p {
 
 .simuladores span {
   font-size: 0.85rem;
+  color: var(--suave);
+}
+
+a {
   color: var(--acento);
+}
+
+.nota {
+  color: var(--suave);
+  font-size: 0.9rem;
+}
+
+.modo {
+  border: 1px solid var(--borde);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.75rem 1rem;
+  align-items: end;
+}
+
+.formulario h3 {
+  grid-column: 1 / -1;
+  margin: 1rem 0 0;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.formulario label.casa {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="number"],
+input:not([type]),
+select,
+button {
+  font: inherit;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--borde);
+  border-radius: 0.35rem;
+  background: var(--tarxeta);
+  color: var(--texto);
+}
+
+button {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.ben {
+  color: #1f6f5c;
+}
+
+.mal {
+  color: #a3341f;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--tarxeta);
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  border: 1px solid var(--borde);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+.num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
