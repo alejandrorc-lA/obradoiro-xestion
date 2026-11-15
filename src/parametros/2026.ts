@@ -80,6 +80,20 @@ export const parametros2026: ParametrosCotizacion = {
     verificado: VERIFICADO,
   },
 
+  // Art. 46, regla primera. El desempleo cotiza sobre la base minima de
+  // contingencias profesionales al tipo de contrato indefinido (art. 33.2.a).1.º)
+  // y el MEI sobre la base minima del Regimen General (regla tercera).
+  alternanciaCuotasUnicas: {
+    valor: {
+      contingenciasComunes: { empresa: 57.72, trabajador: 11.51 },
+      contingenciasProfesionales: { empresa: 7.95, trabajador: 0 },
+      fogasa: { empresa: 4.38, trabajador: 0 },
+      formacionProfesional: { empresa: 2.16, trabajador: 0.28 },
+    },
+    fuente: `${ORDEN}, art. 46, regla primera`,
+    verificado: VERIFICADO,
+  },
+
   // Vigente desde el 17/07/2023. No se ha localizado revision posterior, pero
   // la busqueda no fue exhaustiva: revisar en la actualizacion anual.
   locomocionExentaKm: {

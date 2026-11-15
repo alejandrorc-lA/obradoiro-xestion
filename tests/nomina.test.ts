@@ -4,8 +4,7 @@ import { parametros2026 } from "../src/parametros/2026";
 
 // Casos tomados de las soluciones del docente (carpeta "ejemplos nóminas"),
 // UD 4 de MP0652, periodo 01/11/2026 - 30/11/2026.
-// La nomina 2 (contrato de formacion en alternancia) no esta aqui: cotiza por
-// cuotas unicas y queda pendiente de una decision del docente (ver ESTADO.md).
+// La nomina 2 (contrato de formacion en alternancia) esta en alternancia.test.ts.
 
 const importes = (lineas: LineaCuota[]) => lineas.map((l) => l.importe);
 

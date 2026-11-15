@@ -2,8 +2,9 @@ import type { GrupoCotizacion, ParametrosCotizacion, TipoRepartido } from "../pa
 import { redondearCentimos } from "./redondeo";
 
 // Motor de nomina del Regimen General, procedimiento ordinario, mes completo.
-// Fuera de alcance por ahora: contrato de formacion en alternancia (cuotas
-// unicas), incapacidad temporal, meses incompletos y cotizacion de solidaridad.
+// El contrato de formacion en alternancia esta en alternancia.ts.
+// Fuera de alcance por ahora: incapacidad temporal, meses incompletos y
+// cotizacion de solidaridad.
 //
 // Criterio de redondeo: cada concepto se redondea a centimos y despues se suma.
 

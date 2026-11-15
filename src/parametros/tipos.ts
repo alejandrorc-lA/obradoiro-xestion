@@ -33,6 +33,17 @@ export interface ParametrosCotizacion {
   fogasa: ValorLegal<TipoRepartido>;
   formacionProfesional: ValorLegal<TipoRepartido>;
   mei: ValorLegal<TipoRepartido>;
+  /**
+   * Contrato de formación en alternancia, cuando la base no supera la mínima:
+   * cuotas únicas mensuales en euros. El desempleo y el MEI no son cuotas
+   * fijas: se aplican por tipos sobre la base mínima.
+   */
+  alternanciaCuotasUnicas: ValorLegal<{
+    contingenciasComunes: TipoRepartido;
+    contingenciasProfesionales: TipoRepartido;
+    fogasa: TipoRepartido;
+    formacionProfesional: TipoRepartido;
+  }>;
   /** Euros por kilómetro exentos en gastos de locomoción con vehículo propio. */
   locomocionExentaKm: ValorLegal<number>;
 }
