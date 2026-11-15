@@ -30,12 +30,13 @@ Nota: la carpeta `ejemplos nóminas` está excluida de git porque son soluciones
 - Pruebas y build correctos. El docente probó la pantalla en el navegador el 2026-11-15 y la dio por buena.
 - No incluye todavía el contrato de formación en alternancia (el motor sí lo calcula).
 
-## Tarea 4 — Publicación (en curso)
+## Tarea 4 — Publicación (terminada)
 
 - Repositorio público: https://github.com/alejandrorc-lA/obradoiro-xestion. Código subido el 2026-11-15.
 - Los commits usan la dirección anónima de GitHub del docente, no su correo personal.
 - `.github/workflows/pages.yml` pasa las pruebas, construye y publica en cada subida a `main`.
-- Dirección prevista de la web: https://alejandrorc-la.github.io/obradoiro-xestion/
+- Dirección de la web: https://alejandrorc-la.github.io/obradoiro-xestion/
+- El docente confirmó el 2026-11-15 que la web abre correctamente en esa dirección.
 
 ## Siguiente tarea
 
