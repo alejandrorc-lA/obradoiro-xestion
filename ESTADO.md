@@ -13,7 +13,7 @@
 
 Notas:
 
-- La identidad de git está configurada solo en este repositorio (nombre provisional tomado del correo). Cambiar con `git config user.name "Nombre Apellido"` si se quiere otro.
+- La identidad de git (nombre «Aexiño») está configurada solo en este repositorio. El primer commit conserva el nombre provisional anterior.
 - Todavía no hay repositorio en GitHub; se creará en la tarea 4 (publicación).
 
 ## Siguiente tarea
