@@ -1,6 +1,6 @@
 # Parámetros legales
 
-Un archivo por año (`2026.ts`, `2027.ts`…). Todavía no hay ninguno: se crean en la tarea 2, tras verificar cada cifra.
+Un archivo por año (`2026.ts`, `2027.ts`…), con la forma definida en `tipos.ts`.
 
 Cada valor lleva siempre tres datos:
 

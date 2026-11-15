@@ -1,5 +1,7 @@
 node_modules/
 dist/
+# Soluciones docentes: no se publican
+ejemplos nóminas/
 *.log
 .DS_Store
 Thumbs.db
