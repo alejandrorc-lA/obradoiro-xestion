@@ -1,0 +1,68 @@
+:root {
+  --fondo: #f7f7f4;
+  --texto: #1f2a30;
+  --suave: #5b6770;
+  --tarxeta: #ffffff;
+  --borde: #d9ddd8;
+  --acento: #1f6f5c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+header,
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+h1 {
+  margin: 0;
+  color: var(--acento);
+}
+
+header p {
+  margin: 0.25rem 0 0;
+  color: var(--suave);
+}
+
+.simuladores {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.simuladores li {
+  background: var(--tarxeta);
+  border: 1px solid var(--borde);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.simuladores h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.simuladores p {
+  margin: 0 0 0.75rem;
+  color: var(--suave);
+}
+
+.simuladores span {
+  font-size: 0.85rem;
+  color: var(--acento);
+}
