@@ -27,9 +27,9 @@ Nota: la carpeta `ejemplos nóminas` está excluida de git porque son soluciones
 ## Tarea 3 — Simulador de nómina (primera versión)
 
 - `src/simuladores/nomina/nomina.ts`: formulario del supuesto, modo alumnado (escribe nueve resultados y comprueba cuáles acierta, sin ver la solución) y modo docente (recibo resuelto completo y generador de supuestos aleatorios). Portada con enlace al simulador.
-- Pruebas y build correctos. **La pantalla no se ha revisado en el navegador**: falta que el docente la pruebe con `npm run dev`.
+- Pruebas y build correctos. El docente probó la pantalla en el navegador el 2026-11-15 y la dio por buena.
 - No incluye todavía el contrato de formación en alternancia (el motor sí lo calcula).
 
 ## Siguiente tarea
 
-Revisar el simulador en el navegador y corregir lo que se vea. Después, tarea 4 — publicación en GitHub Pages.
+Tarea 4 — publicación en GitHub Pages. Requiere una cuenta de GitHub del docente.
