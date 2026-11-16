@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 2026-11-15
+Última actualización: 2026-11-16
 
 ## Tarea 1 — Base del proyecto (terminada)
 
@@ -16,8 +16,8 @@ Hecho:
 
 Puntos abiertos:
 
-1. **Nómina 2 (formación en alternancia): implementada según la Orden** por decisión del docente (`src/motor/alternancia.ts`). Además de las cuotas únicas de la solución original, aplica formación profesional (2,16 y 0,28), desempleo y MEI sobre la base mínima (art. 46, confirmado con citas literales). Resultado para Brais: líquido 908,99 y coste 1.106,23, frente a 933,49 y 1.015,05 de la solución original. Falta que el docente contraste estas cifras y actualice su documento de solución. Solo cubre la regla primera (retribución que no supera la base mínima); si la supera, el motor da error en vez de calcular.
-2. **Mínimo en tiempo parcial.** La solución usa base mínima × coeficiente (1.424,40 × 0,30 = 427,32). El art. 39 de la Orden lo calcula como horas trabajadas × base mínima por hora (8,58 en grupos 4 a 11). El motor sigue la Orden. En la nómina 3 el resultado no cambia, pero la cifra de comprobación sí; además falta el dato real de horas del mes (la prueba usa 52 como estimación).
+1. **Nómina 2 (formación en alternancia): implementada según la Orden** por decisión del docente (`src/motor/alternancia.ts`). Además de las cuotas únicas de la solución original, aplica formación profesional (2,16 y 0,28), desempleo y MEI sobre la base mínima (art. 46, confirmado con citas literales). Resultado para Brais: líquido 908,99 y coste 1.106,23, frente a 933,49 y 1.015,05 de la solución original. **El docente dio por buenas las cifras del motor el 2026-11-16**; queda de su parte actualizar su documento de solución. Solo cubre la regla primera (retribución que no supera la base mínima); si la supera, el motor da error en vez de calcular.
+2. **Mínimo en tiempo parcial.** La solución usa base mínima × coeficiente (1.424,40 × 0,30 = 427,32). El art. 39 de la Orden lo calcula como horas trabajadas × base mínima por hora (8,58 en grupos 4 a 11). El motor sigue la Orden. En la nómina 3 el resultado no cambia, pero la cifra de comprobación sí. **El docente dio por bueno el criterio de la Orden y confirmó las 52 horas del mes el 2026-11-16.**
 3. **Locomoción, 0,26 €/km.** Verificado en la Orden HFP/792/2023; no se comprobó de forma exhaustiva que no haya revisión posterior.
 
 Fuera de alcance del motor por ahora: incapacidad temporal, meses incompletos, cotización de solidaridad, cálculo del tipo de IRPF (es un dato de entrada).
@@ -58,11 +58,11 @@ Verificado:
 Sin verificar:
 
 - El plugin está subido a GitHub y activado para este proyecto en `.claude/settings.json`. En la sesión del 2026-11-16 se vio que **no cargaba**: estaba declarado pero nunca se había instalado en el equipo (la aplicación de escritorio no lo instala sola). Ese mismo día se instaló a mano con `claude plugin marketplace add` y `claude plugin install --scope project`; `claude plugin list` lo muestra instalado y activado (versión 0.1.0). El plugin pasa `claude plugin validate`.
-- **Falta comprobarlo en una sesión nueva**: que aparecen las skills y los agentes y que el hook se dispara solo. Los plugins se cargan al arrancar la sesión, así que en la sesión en la que se instaló no se pudo ver.
+- En una sesión nueva (2026-11-16) se comprobó que **el plugin carga**: aparecen las tres skills y los dos agentes. **Falta ver que el hook se dispara solo** al editar el motor o los parámetros.
 - La copia instalada sale de GitHub, no de la carpeta local: tras cambiar algo en `plugin/` hay que subirlo y actualizar el plugin instalado para que surta efecto.
 - La orden `claude` no está en el PATH; el programa está dentro de la aplicación de escritorio (`AppData\Local\Claude-Data\...\claude-code\<versión>\claude.exe`).
 - Las skills y los agentes no se han usado aún en un caso real. El docente tiene pendiente leerlos y dar el visto bueno a su contenido.
 
 ## Siguiente paso
 
-Abrir una sesión nueva, comprobar que el plugin carga y probarlo con un encargo real: por ejemplo, SUPOSTO nómina o REVISAR sobre el simulador de nómina. Después, tarea 6 (nuevos simuladores).
+Probar el plugin con un encargo real: por ejemplo, SUPOSTO nómina o REVISAR sobre el simulador de nómina, y comprobar de paso que el hook se dispara solo. Después, tarea 6 (nuevos simuladores).

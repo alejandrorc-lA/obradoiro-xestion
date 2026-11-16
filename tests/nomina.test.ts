@@ -61,8 +61,9 @@ describe("Nomina 3 - Noelia (tiempo parcial, base mayor que el devengo)", () => 
     diasPeriodo: 30,
     contrato: "duracion_determinada",
     // La solucion no indica las horas del mes (solo el coeficiente 0,30 y doce
-    // horas semanales). 52 es una estimacion: el resultado no depende de ella
-    // mientras la base real (560,00) supere el minimo.
+    // horas semanales). El docente confirmo las 52 horas el 2026-11-16; el
+    // resultado no depende de ellas mientras la base real (560,00) supere el
+    // minimo.
     horasMesTiempoParcial: 52,
     percepcionesSalariales: [{ concepto: "Salario base", importe: 480 }],
     pagasExtra: { numero: 2, importe: 480, prorrateadas: false },
