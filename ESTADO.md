@@ -84,6 +84,15 @@ Pedagogía (`revisor-pedagoxico`), fallos comprobados en el código del simulado
 - Currículo: encaja con CA4.5, CA4.6 y CA4.7 de MP0652 (Decreto 206/2012), CE4.4 y CE4.5 de MP0442 (Decreto 191/2010) y CA3.3 de FOL. Los textos de los criterios hay que cotejarlos con el DOG antes de copiarlos. Sin verificar: si FOL sigue vigente en 2026-27 o lo sustituye otro módulo.
 - Pendiente de que el docente diga para qué módulo y ciclo es el simulador.
 
+Corregido el mismo día en `src/simuladores/nomina/nomina.ts` (solo pantalla; el motor no se tocó):
+
+- Los cuatro fallos del modo alumnado: la corrección se borra al cambiar los datos, se aceptan importes con punto de millares, hay botón «Novo suposto» sin solución y cada fallo muestra una pista.
+- Aviso en pantalla cuando la retribución supera el tope máximo (la cotización de solidaridad sigue sin calcularse).
+- Galego y etiquetas (Orde, Fogasa, extraordinarias, base suxeita a retención do IRPF, gastos de locomoción), «Modo docente (mostra a solución)», texto de la portada, y el 0,26 del generador leído de parámetros.
+- Comprobado: 27 pruebas, build, y prueba en el navegador en local de los cinco comportamientos nuevos. Sin publicar.
+
+No corregido: lista desplegable de grupos, `<caption>` de las tablas y contraste del borde de los campos, y las sugerencias S1 a S9 del revisor (total a deducir como décima respuesta, niveles de dificultad, generador más variado, etc.).
+
 ## Siguiente paso
 
-Corregir en el simulador de nómina lo que el docente apruebe de la revisión (empezando por los cuatro fallos del modo alumnado y el aviso al superar el tope máximo) y comprobar de paso que el hook se dispara solo. Después, tarea 6 (nuevos simuladores).
+Que el docente pruebe el simulador corregido y decida si se publica; resolver las cuatro dudas de criterio de la revisión normativa y decir para qué módulo y ciclo es el simulador. El hook del plugin sigue sin comprobarse (no se ha editado motor ni parámetros). Después, tarea 6 (nuevos simuladores).

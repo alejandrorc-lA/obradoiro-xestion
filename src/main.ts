@@ -10,7 +10,7 @@ interface FichaSimulador {
 }
 
 const simuladores: FichaSimulador[] = [
-  { ruta: "nomina", titulo: "Nómina", descricion: "Calcula un recibo de salarios paso a paso.", montar: montarSimuladorNomina },
+  { ruta: "nomina", titulo: "Nómina", descricion: "Calcula un recibo de salarios e comproba os teus resultados.", montar: montarSimuladorNomina },
   { ruta: "irpf", titulo: "IRPF", descricion: "Tipo de retención e cota." },
   { ruta: "cotizacions", titulo: "Cotizacións", descricion: "Bases e cotas á Seguridade Social." },
   { ruta: "asentos", titulo: "Asentos contables", descricion: "Constrúe asentos no libro diario." },
