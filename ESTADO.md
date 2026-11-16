@@ -63,6 +63,27 @@ Sin verificar:
 - La orden `claude` no está en el PATH; el programa está dentro de la aplicación de escritorio (`AppData\Local\Claude-Data\...\claude-code\<versión>\claude.exe`).
 - Las skills y los agentes no se han usado aún en un caso real. El docente tiene pendiente leerlos y dar el visto bueno a su contenido.
 
+## Revisión del simulador de nómina (2026-11-16)
+
+Primera vez que se usan los dos agentes del plugin en un caso real. Solo leyeron e informaron; no se cambió código.
+
+Normativa (`verificador-normativo`):
+
+- **Todas las cifras de `src/parametros/2026.ts` coinciden** con la Orden PJC/297/2026 (BOE-A-2026-7296), y los 0,26 €/km con la Orden HFP/792/2023, sin revisión posterior localizada. Límite: el agente leyó el BOE por extractos; no pudo confirmar que las modificaciones del Reglamento del IRPF de sept.-oct. de 2026 no toquen el art. 9, ni abrió la AEAT.
+- Por encima del tope máximo (5.101,20) el simulador recorta la base y no calcula ni avisa de la cotización adicional de solidaridad (art. 17 de la Orden). Comprobado en `src/motor/nomina.ts`.
+- Dudas sin resolver (no verificadas en la norma): en grupos 8 a 11 con meses de 31 o 28 días, la base de comunes va por días y los topes de profesionales son mensuales fijos; prorrata de pagas entre 12 también en grupos de retribución diaria (el art. 1.1 habla de 365); tope mínimo de profesionales a tiempo parcial; que el SMI (1.221) más un sexto da 1.424,50 frente al 1.424,40 que fija el art. 2.2.
+- El generador de supuestos lleva el 0,26 escrito a mano (`src/simuladores/nomina/nomina.ts`, línea 222) en vez de leerlo de parámetros.
+
+Pedagogía (`revisor-pedagoxico`), fallos comprobados en el código del simulador:
+
+- Las marcas de corrección no se borran al cambiar los datos del supuesto.
+- Un importe escrito con punto de millares («1.492,23») se marca como error.
+- El alumnado no puede generar supuestos: el botón solo está en modo docente y muestra la solución.
+- La corrección solo dice «Revisa este cálculo»; el agente propone una pista por campo.
+- Galego y etiquetas: «Orden» en castellano en la nota, «Cotiza a FOGASA», «Horas extra»/«pagas extra» frente a «extraordinarias», etiquetas ambiguas, y mejoras de accesibilidad.
+- Currículo: encaja con CA4.5, CA4.6 y CA4.7 de MP0652 (Decreto 206/2012), CE4.4 y CE4.5 de MP0442 (Decreto 191/2010) y CA3.3 de FOL. Los textos de los criterios hay que cotejarlos con el DOG antes de copiarlos. Sin verificar: si FOL sigue vigente en 2026-27 o lo sustituye otro módulo.
+- Pendiente de que el docente diga para qué módulo y ciclo es el simulador.
+
 ## Siguiente paso
 
-Probar el plugin con un encargo real: por ejemplo, SUPOSTO nómina o REVISAR sobre el simulador de nómina, y comprobar de paso que el hook se dispara solo. Después, tarea 6 (nuevos simuladores).
+Corregir en el simulador de nómina lo que el docente apruebe de la revisión (empezando por los cuatro fallos del modo alumnado y el aviso al superar el tope máximo) y comprobar de paso que el hook se dispara solo. Después, tarea 6 (nuevos simuladores).
