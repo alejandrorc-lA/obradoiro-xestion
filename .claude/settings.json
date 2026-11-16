@@ -1,4 +1,7 @@
 {
+  "enabledPlugins": {
+    "obradoiro-xestion@obradoiro": true
+  },
   "extraKnownMarketplaces": {
     "obradoiro": {
       "source": {
@@ -6,8 +9,5 @@
         "repo": "alejandrorc-lA/obradoiro-xestion"
       }
     }
-  },
-  "enabledPlugins": {
-    "obradoiro-xestion@obradoiro": true
   }
 }

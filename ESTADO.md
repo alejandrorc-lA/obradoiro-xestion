@@ -57,7 +57,10 @@ Verificado:
 
 Sin verificar:
 
-- El plugin está subido a GitHub y activado para este proyecto en `.claude/settings.json` (2026-11-16), pero **no se ha comprobado todavía que Claude Code lo cargue**: hay que abrir una sesión nueva y ver que aparecen las skills y los agentes y que el hook se dispara solo. Si no carga, la alternativa es instalarlo a mano con las órdenes del README del plugin.
+- El plugin está subido a GitHub y activado para este proyecto en `.claude/settings.json`. En la sesión del 2026-11-16 se vio que **no cargaba**: estaba declarado pero nunca se había instalado en el equipo (la aplicación de escritorio no lo instala sola). Ese mismo día se instaló a mano con `claude plugin marketplace add` y `claude plugin install --scope project`; `claude plugin list` lo muestra instalado y activado (versión 0.1.0). El plugin pasa `claude plugin validate`.
+- **Falta comprobarlo en una sesión nueva**: que aparecen las skills y los agentes y que el hook se dispara solo. Los plugins se cargan al arrancar la sesión, así que en la sesión en la que se instaló no se pudo ver.
+- La copia instalada sale de GitHub, no de la carpeta local: tras cambiar algo en `plugin/` hay que subirlo y actualizar el plugin instalado para que surta efecto.
+- La orden `claude` no está en el PATH; el programa está dentro de la aplicación de escritorio (`AppData\Local\Claude-Data\...\claude-code\<versión>\claude.exe`).
 - Las skills y los agentes no se han usado aún en un caso real. El docente tiene pendiente leerlos y dar el visto bueno a su contenido.
 
 ## Siguiente paso
