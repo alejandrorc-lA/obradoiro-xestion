@@ -1,0 +1,17 @@
+{
+  "description": "Pasa las pruebas automaticamente tras cada cambio en src/motor o src/parametros.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/pasar-probas.mjs\"",
+            "timeout": 180
+          }
+        ]
+      }
+    ]
+  }
+}

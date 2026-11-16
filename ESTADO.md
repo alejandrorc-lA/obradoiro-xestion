@@ -38,6 +38,28 @@ Nota: la carpeta `ejemplos nóminas` está excluida de git porque son soluciones
 - Dirección de la web: https://alejandrorc-la.github.io/obradoiro-xestion/
 - El docente confirmó el 2026-11-15 que la web abre correctamente en esa dirección.
 
-## Siguiente tarea
+## Tarea 5 — Plugin «obradoiro-xestion» (escrito; falta instalarlo y supervisarlo)
 
-Tarea 5 — plugin «obradoiro-xestion» (skills, agentes y hook).
+Hecho el 2026-11-16, en `plugin/obradoiro-xestion/` (explicado en su `README.md`):
+
+- Skills `novo-simulador`, `actualizar-parametros-legais` y `xerar-suposto`.
+- Agentes `verificador-normativo` y `revisor-pedagoxico` (solo leen e informan).
+- Hook `pasar-probas`: pasa `npm test` tras cada edición en `src/motor` o `src/parametros`.
+- Script `skills/xerar-suposto/scripts/calcular.mjs`: ejecuta el motor con los datos de un supuesto.
+- `.claude-plugin/marketplace.json` en la raíz, para poder instalar el plugin desde el repositorio de GitHub.
+- La carpeta `supostos/` queda excluida de git (soluciones en un repositorio público).
+
+Verificado:
+
+- El script de supuestos reproduce la nómina 1 del docente (líquido 1.492,23).
+- El hook, ejecutado a mano: pasa las pruebas al editar motor o parámetros, no hace nada con otros archivos y avisa con el resultado real cuando una prueba falla (fallo provocado y retirado).
+- `npm test` (27 pruebas) y `npm run build` correctos.
+
+Sin verificar:
+
+- El plugin **no se ha instalado todavía en Claude Code**: no se ha comprobado que cargue las skills y los agentes ni que el hook se dispare solo. Para instalarlo desde GitHub hay que subir antes el repositorio.
+- Las skills y los agentes no se han usado aún en un caso real. El docente tiene pendiente leerlos y dar el visto bueno a su contenido.
+
+## Siguiente paso
+
+Subir el plugin a GitHub (con confirmación), instalarlo y probarlo con un encargo real: por ejemplo, SUPOSTO nómina o REVISAR sobre el simulador de nómina. Después, tarea 6 (nuevos simuladores).

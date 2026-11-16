@@ -1,0 +1,13 @@
+{
+  "name": "obradoiro",
+  "owner": {
+    "name": "Obradoiro de Xestion"
+  },
+  "plugins": [
+    {
+      "name": "obradoiro-xestion",
+      "source": "./plugin/obradoiro-xestion",
+      "description": "Mantenimiento de la web Obradoiro de Xestion: nuevos simuladores, parametros legales verificados y supuestos practicos."
+    }
+  ]
+}

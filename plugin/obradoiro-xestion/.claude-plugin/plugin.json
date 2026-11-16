@@ -1,0 +1,10 @@
+{
+  "name": "obradoiro-xestion",
+  "version": "0.1.0",
+  "description": "Mantenimiento de la web Obradoiro de Xestion: nuevos simuladores, parametros legales verificados en fuentes oficiales y supuestos practicos con solucion calculada por el motor.",
+  "author": {
+    "name": "Obradoiro de Xestion"
+  },
+  "repository": "https://github.com/alejandrorc-lA/obradoiro-xestion",
+  "keywords": ["fp", "administracion", "nomina", "simuladores", "galego"]
+}
