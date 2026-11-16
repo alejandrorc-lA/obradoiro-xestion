@@ -89,10 +89,11 @@ Corregido el mismo día en `src/simuladores/nomina/nomina.ts` (solo pantalla; el
 - Los cuatro fallos del modo alumnado: la corrección se borra al cambiar los datos, se aceptan importes con punto de millares, hay botón «Novo suposto» sin solución y cada fallo muestra una pista.
 - Aviso en pantalla cuando la retribución supera el tope máximo (la cotización de solidaridad sigue sin calcularse).
 - Galego y etiquetas (Orde, Fogasa, extraordinarias, base suxeita a retención do IRPF, gastos de locomoción), «Modo docente (mostra a solución)», texto de la portada, y el 0,26 del generador leído de parámetros.
-- Comprobado: 27 pruebas, build, y prueba en el navegador en local de los cinco comportamientos nuevos. Sin publicar.
+- Comprobado: 27 pruebas, build, y prueba en el navegador en local de los cinco comportamientos nuevos.
+- **Publicado el 2026-11-16** por orden del docente: subido a GitHub y comprobado que la web pública ya sirve la versión nueva (contiene el botón «Novo suposto»). Falta que el docente la abra y la dé por buena.
 
 No corregido: lista desplegable de grupos, `<caption>` de las tablas y contraste del borde de los campos, y las sugerencias S1 a S9 del revisor (total a deducir como décima respuesta, niveles de dificultad, generador más variado, etc.).
 
 ## Siguiente paso
 
-Que el docente pruebe el simulador corregido y decida si se publica; resolver las cuatro dudas de criterio de la revisión normativa y decir para qué módulo y ciclo es el simulador. El hook del plugin sigue sin comprobarse (no se ha editado motor ni parámetros). Después, tarea 6 (nuevos simuladores).
+Que el docente pruebe el simulador corregido en la web publicada; resolver las cuatro dudas de criterio de la revisión normativa y decir para qué módulo y ciclo es el simulador. El hook del plugin sigue sin comprobarse (no se ha editado motor ni parámetros). Después, tarea 6 (nuevos simuladores).
