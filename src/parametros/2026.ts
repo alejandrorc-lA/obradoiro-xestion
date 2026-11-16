@@ -94,8 +94,10 @@ export const parametros2026: ParametrosCotizacion = {
     verificado: VERIFICADO,
   },
 
-  // Vigente desde el 17/07/2023. No se ha localizado revision posterior, pero
-  // la busqueda no fue exhaustiva: revisar en la actualizacion anual.
+  // Vigente desde el 17/07/2023. Revisado el 2026-11-16: la ficha del BOE de la
+  // Orden no recoge modificacion ni derogacion posterior. Sin confirmar que las
+  // modificaciones del Reglamento del IRPF de sept.-oct. de 2026 no toquen el
+  // art. 9, ni contrastado en la AEAT: revisar en la actualizacion anual.
   locomocionExentaKm: {
     valor: 0.26,
     fuente: "BOE-A-2023-16461 (Orden HFP/792/2023), articulo unico",

@@ -58,7 +58,7 @@ Verificado:
 Sin verificar:
 
 - El plugin está subido a GitHub y activado para este proyecto en `.claude/settings.json`. En la sesión del 2026-11-16 se vio que **no cargaba**: estaba declarado pero nunca se había instalado en el equipo (la aplicación de escritorio no lo instala sola). Ese mismo día se instaló a mano con `claude plugin marketplace add` y `claude plugin install --scope project`; `claude plugin list` lo muestra instalado y activado (versión 0.1.0). El plugin pasa `claude plugin validate`.
-- En una sesión nueva (2026-11-16) se comprobó que **el plugin carga**: aparecen las tres skills y los dos agentes. **Falta ver que el hook se dispara solo** al editar el motor o los parámetros.
+- En una sesión nueva (2026-11-16) se comprobó que **el plugin carga**: aparecen las tres skills y los dos agentes. **El hook se dispara solo** (comprobado el 2026-11-16): al cambiar a propósito un tipo en `src/parametros/2026.ts`, pasó las pruebas sin pedírselo y devolvió los tres fallos reales; el cambio se deshizo y las pruebas vuelven a pasar. Cuando las pruebas pasan, el aviso lo ve el docente en pantalla, no Claude.
 - La copia instalada sale de GitHub, no de la carpeta local: tras cambiar algo en `plugin/` hay que subirlo y actualizar el plugin instalado para que surta efecto.
 - La orden `claude` no está en el PATH; el programa está dentro de la aplicación de escritorio (`AppData\Local\Claude-Data\...\claude-code\<versión>\claude.exe`).
 - Las skills y los agentes no se han usado aún en un caso real. El docente tiene pendiente leerlos y dar el visto bueno a su contenido.
@@ -96,4 +96,4 @@ No corregido: lista desplegable de grupos, `<caption>` de las tablas y contraste
 
 ## Siguiente paso
 
-Que el docente pruebe el simulador corregido en la web publicada; resolver las cuatro dudas de criterio de la revisión normativa y decir para qué módulo y ciclo es el simulador. El hook del plugin sigue sin comprobarse (no se ha editado motor ni parámetros). Después, tarea 6 (nuevos simuladores).
+Que el docente pruebe el simulador corregido en la web publicada; resolver las cuatro dudas de criterio de la revisión normativa y decir para qué módulo y ciclo es el simulador. Después, tarea 6 (nuevos simuladores).
