@@ -71,7 +71,7 @@ Normativa (`verificador-normativo`):
 
 - **Todas las cifras de `src/parametros/2026.ts` coinciden** con la Orden PJC/297/2026 (BOE-A-2026-7296), y los 0,26 €/km con la Orden HFP/792/2023, sin revisión posterior localizada. Límite: el agente leyó el BOE por extractos; no pudo confirmar que las modificaciones del Reglamento del IRPF de sept.-oct. de 2026 no toquen el art. 9, ni abrió la AEAT.
 - Por encima del tope máximo (5.101,20) el simulador recorta la base y no calcula ni avisa de la cotización adicional de solidaridad (art. 17 de la Orden). Comprobado en `src/motor/nomina.ts`.
-- Dudas sin resolver (no verificadas en la norma): en grupos 8 a 11 con meses de 31 o 28 días, la base de comunes va por días y los topes de profesionales son mensuales fijos; prorrata de pagas entre 12 también en grupos de retribución diaria (el art. 1.1 habla de 365); tope mínimo de profesionales a tiempo parcial; que el SMI (1.221) más un sexto da 1.424,50 frente al 1.424,40 que fija el art. 2.2.
+- Cuatro dudas de criterio, **dadas por buenas por el docente el 2026-11-16: el motor se queda como está** (el agente no pudo contrastarlas en el texto de la norma; es criterio del docente): en grupos 8 a 11 con meses de 31 o 28 días, la base de comunes va por días y los topes de profesionales son mensuales fijos; prorrata de pagas entre 12 también en grupos de retribución diaria (el art. 1.1 habla de 365); tope mínimo de profesionales a tiempo parcial; que el SMI (1.221) más un sexto da 1.424,50 frente al 1.424,40 que fija el art. 2.2.
 - El generador de supuestos lleva el 0,26 escrito a mano (`src/simuladores/nomina/nomina.ts`, línea 222) en vez de leerlo de parámetros.
 
 Pedagogía (`revisor-pedagoxico`), fallos comprobados en el código del simulador:
@@ -82,7 +82,7 @@ Pedagogía (`revisor-pedagoxico`), fallos comprobados en el código del simulado
 - La corrección solo dice «Revisa este cálculo»; el agente propone una pista por campo.
 - Galego y etiquetas: «Orden» en castellano en la nota, «Cotiza a FOGASA», «Horas extra»/«pagas extra» frente a «extraordinarias», etiquetas ambiguas, y mejoras de accesibilidad.
 - Currículo: encaja con CA4.5, CA4.6 y CA4.7 de MP0652 (Decreto 206/2012), CE4.4 y CE4.5 de MP0442 (Decreto 191/2010) y CA3.3 de FOL. Los textos de los criterios hay que cotejarlos con el DOG antes de copiarlos. Sin verificar: si FOL sigue vigente en 2026-27 o lo sustituye otro módulo.
-- Pendiente de que el docente diga para qué módulo y ciclo es el simulador.
+- **Módulo de destino: Simulación Empresarial** (indicado por el docente el 2026-11-16). La revisión pedagógica no miró los resultados de aprendizaje y criterios de ese módulo; si se quiere esa correspondencia, hay que volver a lanzar el revisor.
 
 Corregido el mismo día en `src/simuladores/nomina/nomina.ts` (solo pantalla; el motor no se tocó):
 
@@ -92,8 +92,8 @@ Corregido el mismo día en `src/simuladores/nomina/nomina.ts` (solo pantalla; el
 - Comprobado: 27 pruebas, build, y prueba en el navegador en local de los cinco comportamientos nuevos.
 - **Publicado el 2026-11-16** por orden del docente: subido a GitHub y comprobado que la web pública ya sirve la versión nueva (contiene el botón «Novo suposto»). Falta que el docente la abra y la dé por buena.
 
-No corregido: lista desplegable de grupos, `<caption>` de las tablas y contraste del borde de los campos, y las sugerencias S1 a S9 del revisor (total a deducir como décima respuesta, niveles de dificultad, generador más variado, etc.).
+No corregido, y **el docente lo da por bueno así (2026-11-16)**, igual que el estado de su documento de solución de la nómina 2: lista desplegable de grupos, `<caption>` de las tablas y contraste del borde de los campos, y las sugerencias S1 a S9 del revisor (total a deducir como décima respuesta, niveles de dificultad, generador más variado, etc.).
 
 ## Siguiente paso
 
-Que el docente pruebe el simulador corregido en la web publicada; resolver las cuatro dudas de criterio de la revisión normativa y decir para qué módulo y ciclo es el simulador. Después, tarea 6 (nuevos simuladores).
+Que el docente pruebe el simulador corregido en la web publicada. El simulador de nómina queda cerrado. Después, tarea 6 (nuevos simuladores).
