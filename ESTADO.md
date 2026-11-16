@@ -57,9 +57,9 @@ Verificado:
 
 Sin verificar:
 
-- El plugin **no se ha instalado todavía en Claude Code**: no se ha comprobado que cargue las skills y los agentes ni que el hook se dispare solo. Para instalarlo desde GitHub hay que subir antes el repositorio.
+- El plugin está subido a GitHub y activado para este proyecto en `.claude/settings.json` (2026-11-16), pero **no se ha comprobado todavía que Claude Code lo cargue**: hay que abrir una sesión nueva y ver que aparecen las skills y los agentes y que el hook se dispara solo. Si no carga, la alternativa es instalarlo a mano con las órdenes del README del plugin.
 - Las skills y los agentes no se han usado aún en un caso real. El docente tiene pendiente leerlos y dar el visto bueno a su contenido.
 
 ## Siguiente paso
 
-Subir el plugin a GitHub (con confirmación), instalarlo y probarlo con un encargo real: por ejemplo, SUPOSTO nómina o REVISAR sobre el simulador de nómina. Después, tarea 6 (nuevos simuladores).
+Abrir una sesión nueva, comprobar que el plugin carga y probarlo con un encargo real: por ejemplo, SUPOSTO nómina o REVISAR sobre el simulador de nómina. Después, tarea 6 (nuevos simuladores).
