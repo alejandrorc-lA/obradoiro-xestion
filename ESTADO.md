@@ -98,7 +98,6 @@ No corregido, y **el docente lo da por bueno así (2026-11-16)**, igual que el e
 
 - Revisión: sin correos, contraseñas ni claves en el repositorio ni en su historial; `npm audit` sin vulnerabilidades; la web no guarda ni envía datos.
 - A petición del docente se quitaron de los archivos públicos el nombre del centro y su ubicación, y se reescribió el historial de `main` para borrarlos también de los commits antiguos (subida forzada). Los identificadores de todos los commits cambiaron.
-- Copia local del historial anterior en la rama `respaldo-antes-reescritura` (y en `refs/original`). **No subirla nunca**: contiene los textos retirados.
 - Pendiente: los commits antiguos siguen abriéndose en GitHub si se conoce su identificador, hasta que GitHub los purgue. Solo el soporte de GitHub puede forzarlo (o borrar y volver a crear el repositorio).
 
 ## Siguiente paso
